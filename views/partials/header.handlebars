@@ -1,0 +1,23 @@
+<header>
+    <div class="header-box">
+        <h1>Jeux vidéo</h1>
+        <p class="subtitle">À essayer au moins une fois dans votre vie</p>
+        <p class="subsubtitle">(Si ça vous intéresse)</p>
+
+        <nav>
+            <ul>
+                {{#if isAuthenticated}}
+                    {{#unless isListRoute}}
+                        <li><a href="/liste">Liste</a></li>
+                        <li><form action="/deconnexion" method="post"><input type="submit" value="Déconnexion"></form></li>
+                    {{/unless}}
+                {{else}}
+                    <li><a href="/">Connexion</a></li>
+                    <li><a href="/inscription">Inscription</a></li>
+                {{/if}}
+            </ul>
+        </nav>
+    </div>
+</header>
+
+

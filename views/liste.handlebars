@@ -1,0 +1,22 @@
+<ul>
+  {{#each jeux}}
+    <li>
+        <div class="img">
+            <div class="ratio-box">
+                <img src="{{chemin_image}}" alt="{{nom}}">
+            </div>
+            {{#if en_vente}}
+                <div class="en-vente">En vente!</div>
+            {{/if}}
+        </div>
+        <div class="info">
+            <div class="nom">{{nom}}</div>
+            <div class="description">{{description}}</div>
+            <div class="info-footer">
+                <div class="prix">Prix du jeu {{prix}} €</div>
+                <div class="evaluation">Évaluation du jeu {{evaluation}}%</div>
+            </div>
+        </div>
+    </li>
+  {{/each}}
+</ul>
